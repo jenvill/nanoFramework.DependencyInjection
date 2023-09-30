@@ -79,6 +79,11 @@ namespace nanoFramework.DependencyInjection
             return _engine.GetService(serviceType);
         }
 
+        public void Configure(object options)
+        {
+            _engine.Services.Add(new ServiceDescriptor(options.GetType(), options));
+        }
+
         /// <inheritdoc/>
         public void Dispose()
         {
