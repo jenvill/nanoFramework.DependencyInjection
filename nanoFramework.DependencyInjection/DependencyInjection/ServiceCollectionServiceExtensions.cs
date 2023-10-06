@@ -104,6 +104,19 @@ namespace nanoFramework.DependencyInjection
             return services;
         }
 
+        public static IServiceCollection AddTransient(this IServiceCollection services, Type serviceType, object implementationInstance)
+        {
+            if (services == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            var descriptor = new ServiceDescriptor(serviceType, implementationInstance);
+            services.Add(descriptor);
+
+            return services;
+        }
+
         /// <summary>
         /// Adds a transient service of the type specified in <paramref name="serviceType"/> to the
         /// specified <see cref="IServiceCollection"/>.
