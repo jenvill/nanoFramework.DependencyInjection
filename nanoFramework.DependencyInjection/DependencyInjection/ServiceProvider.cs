@@ -89,7 +89,7 @@ namespace nanoFramework.DependencyInjection
 
         public void Configure(object options)
         {
-            _engine.Services.Add(new ServiceDescriptor(options.GetType(), options));
+            Engine.Services.Add(new ServiceDescriptor(options.GetType(), options));
         }
 
         /// <inheritdoc/>
