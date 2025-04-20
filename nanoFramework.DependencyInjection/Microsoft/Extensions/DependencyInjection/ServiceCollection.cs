@@ -5,15 +5,15 @@
 
 using System.Collections;
 
-namespace nanoFramework.DependencyInjection
+namespace Microsoft.Extensions.DependencyInjection
 {
     /// <summary>
     /// Default implementation of <see cref="IServiceCollection"/>.
     /// </summary>
     public class ServiceCollection : IServiceCollection
     {
-        private static readonly object _syncLock = new object();
-        private readonly ArrayList _descriptors = new ArrayList();
+        private readonly object _syncLock = new();
+        private readonly ArrayList _descriptors = [];
 
         /// <inheritdoc/>
         public bool IsReadOnly => false;

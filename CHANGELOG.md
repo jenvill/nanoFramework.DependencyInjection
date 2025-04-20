@@ -2,7 +2,23 @@
 
 ## [**Changes available only in 'Preview' NuGet packages:**](https://github.com/nanoframework/nanoFramework.DependencyInjection/tree/HEAD)
 
-[Full Changelog](https://github.com/nanoframework/nanoFramework.DependencyInjection/compare/v1.0.22...HEAD)
+[Full Changelog](https://github.com/nanoframework/nanoFramework.DependencyInjection/compare/v1.1.1...HEAD)
+
+**Documentation and other chores:**
+
+- Update 2 NuGet dependencies [\#34](https://github.com/nanoframework/nanoFramework.DependencyInjection/pull/34)
+
+## [v1.1.1](https://github.com/nanoframework/nanoFramework.DependencyInjection/tree/v1.1.1) (2023-11-06)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.DependencyInjection/compare/v1.0.35...v1.1.1)
+
+**Implemented enhancements:**
+
+- Implemented IServiceProviderIsService  [\#33](https://github.com/nanoframework/nanoFramework.DependencyInjection/pull/33)
+
+## [v1.0.35](https://github.com/nanoframework/nanoFramework.DependencyInjection/tree/v1.0.35) (2023-10-04)
+
+[Full Changelog](https://github.com/nanoframework/nanoFramework.DependencyInjection/compare/v1.0.22...v1.0.35)
 
 **Implemented enhancements:**
 
