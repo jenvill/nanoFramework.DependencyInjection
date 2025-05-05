@@ -29,8 +29,6 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <exception cref="ArgumentException">Implementation type cannot be an abstract or interface class.</exception>
         public ServiceDescriptor(Type serviceType, Type implementationType, ServiceLifetime lifetime): this(serviceType, lifetime)
         {
-            ArgumentNullException.ThrowIfNull(serviceType);
-            ArgumentNullException.ThrowIfNull(implementationType);
 
             if (implementationType.IsAbstract || implementationType.IsInterface)
             {
@@ -49,9 +47,6 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <exception cref="ArgumentNullException"><paramref name="serviceType"/> or <paramref name="instance"/> can't be <see langword="null"/></exception>
         public ServiceDescriptor(Type serviceType, object instance): this(serviceType, ServiceLifetime.Singleton)
         {
-            ArgumentNullException.ThrowIfNull(serviceType);
-            ArgumentNullException.ThrowIfNull(instance);
-
             ImplementationInstance = instance;
             ImplementationType = instance.GetType();
         }
@@ -67,8 +62,6 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <exception cref="ArgumentException">Implementation type cannot be an abstract or interface class.</exception>
         public ServiceDescriptor(Type serviceType, ImplementationFactoryDelegate implementationFactory, ServiceLifetime lifetime): this(serviceType, lifetime)
         {
-            ArgumentNullException.ThrowIfNull(serviceType);
-            ArgumentNullException.ThrowIfNull(implementationFactory);
 
             ImplementationFactory = implementationFactory;
         }
@@ -161,9 +154,6 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns>A new instance of <see cref="ServiceDescriptor"/>.</returns>
         public static ServiceDescriptor Describe(Type serviceType, Type implementationType, ServiceLifetime lifetime)
         {
-            ArgumentNullException.ThrowIfNull(serviceType);
-            ArgumentNullException.ThrowIfNull(implementationType);
-
             return new ServiceDescriptor(serviceType, implementationType, lifetime);
         }
 
@@ -178,8 +168,6 @@ namespace Microsoft.Extensions.DependencyInjection
         /// <returns>A new instance of <see cref="ServiceDescriptor"/>.</returns>
         public static ServiceDescriptor Describe(Type serviceType, ImplementationFactoryDelegate implementationFactory, ServiceLifetime lifetime)
         {
-            ArgumentNullException.ThrowIfNull(serviceType);
-            ArgumentNullException.ThrowIfNull(implementationFactory);
 
             return new ServiceDescriptor(serviceType, implementationFactory, lifetime);
         }
